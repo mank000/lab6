@@ -102,6 +102,10 @@ void solution_2() {
         cout << "\n";
     };
     cout << "Конец исходного массива\n";
+    if (k > usern or k < 1) {
+        cerr << "Указанное число больше кол-ва столбцов";
+        exit(1);
+    };
     for (int i = 0; i < usern; i++) {
         for (int j = k - 1; j < userm; j++) {
             array[i][j] = array[i][j + 1];
@@ -116,8 +120,6 @@ void solution_2() {
     };
     cout << "Конец итогового массива\n";
 }
-
-
 
 void dynamic_solution_2() {
     int usern, userm, k;
@@ -138,6 +140,10 @@ void dynamic_solution_2() {
         cout << "\n";
     };
     cout << "Конец исходного массива\n";
+    if (k > usern or k < 1) {
+        cerr << "Указанное число больше кол-ва столбцов";
+        exit(1);
+    };
     for (int i = 0; i < usern; i++) {
         for (int j = k - 1; j < userm; j++) {
             arr[i][j] = arr[i][j + 1];
